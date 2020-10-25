@@ -1,9 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <router-view />
-  <router-link to="/">one</router-link>
-  |
-  <router-link to="/home">home</router-link>
+  <router-view/>
 </template>
 
 <script>
