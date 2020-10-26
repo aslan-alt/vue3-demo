@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from "vue-router";
+import {createRouter, createWebHashHistory,useRoute} from "vue-router";
 import Doc from './views/Doc.vue'
 import Home from './views/Home.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
@@ -25,6 +25,8 @@ const router = createRouter({
 router.afterEach(()=>{
     console.log('路由切换了')
 })
+
 export {
-    router
+    router,
+    useRoute
 }
