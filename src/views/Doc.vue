@@ -19,21 +19,23 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view/>
+      </main>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import TopNav from "../components/TopNav.vue";
-import {inject,Ref} from 'vue'
+import {inject, Ref} from 'vue'
 
 export default {
   name: "Doc",
   components: {
     TopNav
   },
-  setup(){
+  setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible')
     return {
       menuVisible
@@ -58,7 +60,8 @@ aside {
       padding: 4px 0;
     }
   }
-  @media(max-width:500px){
+
+  @media(max-width: 500px) {
     position: fixed;
     top: 0;
     left: 0;
